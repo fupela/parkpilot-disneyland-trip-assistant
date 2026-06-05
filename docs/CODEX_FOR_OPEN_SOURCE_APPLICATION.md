@@ -29,6 +29,10 @@ I maintain ParkPilot Disneyland Trip Assistant, a public Swift/iOS open-source p
 
 I am applying for Codex for Open Source support so I can use ChatGPT Pro with Codex and API credits to improve the project faster: expanding test coverage, reviewing SwiftUI architecture, hardening privacy/safety boundaries, improving docs, and preparing a clean mobile install workflow for contributors and testers.
 
+## Strongest qualification argument
+
+The strongest reason this repository fits the program is that it is a real public open-source project with active maintainer work that maps directly to Codex's stated use cases: coding, review, test generation, documentation, release workflows, and safety/privacy hardening. It is not a placeholder repo; it has working Swift/iOS code, separated app/core modules, a public privacy posture, and passing automated tests. Codex would be used for concrete maintainer tasks rather than general ChatGPT usage.
+
 ## Why Codex would help
 
 Codex would reduce maintainer load by helping with:
