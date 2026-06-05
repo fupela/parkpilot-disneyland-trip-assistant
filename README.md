@@ -17,10 +17,7 @@ The first implementation uses deterministic seed data. It does not store Disney 
 
 ## Local Test Note
 
-`swift build` is the reliable local verification command in this checkout. The
-currently selected Command Line Tools toolchain fails to import `XCTest`, so
-`swift test` may stop with `no such module 'XCTest'` until Xcode's full toolchain
-is selected.
+`swift build` and `swift test` both pass in the current macOS/Xcode command-line toolchain used for this public checkout.
 
 ## Product Readiness Checklist
 
@@ -39,14 +36,11 @@ is selected.
 
 This repository is a standalone public copy of a Swift/iOS trip-planning prototype. It contains deterministic seed data and local planning logic only. It does **not** store Disney credentials, scrape Disney services, automate Disney account actions, or include private API keys.
 
-## ChatGPT / Apps SDK Submission Status
+## OpenAI Codex for Open Source Notes
 
-This project is currently a native Swift/iOS app, not a hosted ChatGPT Apps SDK app. To submit it for public ChatGPT distribution, the next implementation step is to add and deploy a public MCP/Apps SDK server that exposes narrow, read-only planning tools backed by this trip-planning logic or equivalent data.
+This repository can be used as a public proof artifact for an OpenAI Codex for Open Source application.
 
-OpenAI's current submission flow requires:
+- Application notes: `docs/CODEX_FOR_OPEN_SOURCE_APPLICATION.md`
+- Privacy posture: `docs/PRIVACY.md`
 
-- a publicly accessible MCP server URL,
-- a content security policy for any fetched resources,
-- app name, logo, screenshots, description, support contact, and privacy policy URL,
-- test prompts and expected responses,
-- verified individual or organization identity in the OpenAI Platform Dashboard.
+This is **not** a ChatGPT Apps SDK submission repo. It is a native Swift/iOS prototype with deterministic local planning logic and tests.
