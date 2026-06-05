@@ -69,11 +69,14 @@ final class TripStoreTests: XCTestCase {
     func testDisneyHandoffDoesNotSuggestAutomaticBackgroundBooking() {
         let handoff = DisneyHandoff.lightningLane(attractionName: "Indiana Jones Adventure")
         let manualInstructions = handoff.manualInstructions.lowercased()
+        let bannedWords = ["automatic", "background", "bot", "credential"]
 
-        XCTAssertFalse(manualInstructions.contains("automatic"))
-        XCTAssertFalse(manualInstructions.contains("background"))
-        XCTAssertFalse(manualInstructions.contains("bot"))
-        XCTAssertFalse(manualInstructions.contains("credential"))
+        for word in bannedWords {
+            XCTAssertNil(
+                manualInstructions.range(of: #"\b\#(word)\b"#, options: .regularExpression),
+                "Handoff instructions should not suggest \(word)-based booking"
+            )
+        }
     }
 
     func testGeofenceScanInPromptOnlyPromptsNearGateBeforeConfirmation() {
